@@ -33,3 +33,15 @@ if [ $success -eq 0 ]; then
     echo "❌ node_exporter did not start after 10 seconds"
     exit 1
 fi
+
+
+
+# Prometheus
+if docker run --name prometheus --rm -d -p 9090:9090 \
+-v "$SCRIPT_DIR"/../modules/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml \
+prom/prometheus:main; then
+    echo "✅ Prometheus container started"
+else
+    echo "❌ Prometheus failed to start"
+fi
+echo "run docker ps to inspect running containers for more info"
