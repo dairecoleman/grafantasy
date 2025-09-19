@@ -45,3 +45,9 @@ else
     echo "❌ Prometheus failed to start"
 fi
 echo "run docker ps to inspect running containers for more info"
+
+
+
+
+# TODO: start grafana with docker compose up -d
+# TODO:script that gracefully exits all services 
