@@ -47,7 +47,8 @@ fi
 echo "run docker ps to inspect running containers for more info"
 
 
-
-
-# TODO: start grafana with docker compose up -d
+# Grafana
+cd "$SCRIPT_DIR/../modules/grafana/" || exit
+docker compose up -d
+echo "Visit http://localhost:3000/ to view"
 # TODO:script that gracefully exits all services 
