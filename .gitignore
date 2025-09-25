@@ -1,3 +1,5 @@
 modules/prometheus/prometheus
 modules/prometheus/promtool
 grafantasy_data/*
+.env
+modules/playwright/venv_playwright
