@@ -3,3 +3,4 @@ modules/prometheus/promtool
 grafantasy_data/*
 .env
 modules/playwright/venv_playwright
+modules/grafana/data/

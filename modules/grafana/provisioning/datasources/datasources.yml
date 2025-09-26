@@ -7,3 +7,7 @@ datasources:
     url: http://172.17.0.1:9090
     isDefault: true
 
+  - name: Hevy
+    type: frser-sqlite-datasource
+    access: proxy
+    database: /var/lib/grafana/hevy.db

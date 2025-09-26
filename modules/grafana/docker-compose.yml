@@ -8,7 +8,7 @@ services:
   #    - "9090:9090"
 
   grafana:
-    image: grafana/grafana:latest
+    build: .   # Build custom image from Dockerfile
     container_name: grafana
     environment:
       - GF_SECURITY_ADMIN_USER=admin
@@ -20,6 +20,8 @@ services:
       - ./provisioning:/etc/grafana/provisioning
       # Mount dashboards
       - ./dashboards:/var/lib/grafana/dashboards
+      # Mount database directory
+      - ./data:/var/lib/grafana/
     ports:
       - "3000:3000"
 
